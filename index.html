@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>New Form Style</title>
+	<style>
+		*, *::after, *::before {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		/* All Form Style Here */
+		form {
+		}
+		form.form-horizantal {
+			width: 960px;
+			padding: 15px;
+			margin: 30px auto;
+			background: #eee;
+			overflow: auto;
+			border-radius: 10px;
+
+		}
+		form.form-horizantal .form-group {
+			width: 100%;
+			overflow: auto;
+			padding: 15px 0;
+		}
+		form.form-horizantal .form-group .control-label {
+			float: left;
+			width: 18%;
+			line-height: 34px;
+			text-align: right;
+			padding-right: 15px;
+		}
+		form.form-horizantal .form-group .input-width {
+			float: left;
+			width: 82%;
+		}
+		form.form-horizantal .form-group .input-width .form-control {
+			width: 100%;
+			padding: 0 15px;
+			line-height: 34px;
+			border: 1px solid #444;
+			border-radius: 8px;
+		}
+		form.form-horizantal .form-group .input-width label {
+			line-height: 34px;
+		}
+		
+		form.form-horizantal .form-towcol .form-group{
+			width: 50%;
+			float: left;
+		}
+		form.form-horizantal .form-towcol .form-group .input-width {
+			width: 65%;
+		}
+		form.form-horizantal .form-towcol .form-group .control-label {
+			width: 35%;
+		}
+
+		/* All Button Style Here */
+		.btn-group {
+			padding: 0;
+			display: inline-block;
+			overflow: auto;
+		}
+		.pull-right{
+			float: right; 
+		}
+		.btn {
+			border: 1px solid #6C757D;
+			background: #6C757D;
+			color: #eee;
+			border-radius: 5px;
+			display: inline-block;
+			padding: 10px 35px;
+			margin: 15px 0;
+		}
+		.btn:hover {
+			border: 1px solid #5A6268;
+			background: #5A6268;
+		}
+		.btn.btn-danger {
+			background-color: #dc3545;
+    		border-color: #dc3545;
+		}
+		.btn.btn-danger:hover {
+			background-color: #C82333;
+    		border-color: #C82333;
+		}
+		.btn.btn-success {
+			background-color: #28a745;
+			border-color: #28a745;
+		}
+		.btn.btn-success:hover {
+			background-color: #218838;
+			border-color: #218838;
+		}
+		.req {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<form action="" method="" class="form-horizantal">
+		<div class="form-group">
+			<label for="" class="control-label">Name <span class="req">*</span> :</label>
+			<div class="input-width">
+				<input type="text" class="form-control" placeholder="Enter Your Name..." >
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="name" class="control-label">Father's Name <span class="req">*</span> :</label>
+			<div class="input-width">
+				<input name="fathername" type="text" placeholder="Enter Your Father's Name.Mr......." class="form-control" required>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="name" class="control-label">Mother's Name <span class="req">*</span> :</label>
+			<div class="input-width">
+				<input name="fathername" type="text" placeholder="Enter Your Mother's Name..." class="form-control" required>
+			</div>
+		</div>
+		<div class="form-towcol">
+			<div class="form-group">
+				<label for="name" class="control-label">Class <span class="req">*</span> :</label>
+				<div class="input-width">
+					<input name="class" type="text" placeholder="Enter Your Class..." class="form-control" required>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="name" class="control-label">Roll <span class="req">*</span> :</label>
+				<div class="input-width">
+					<input name="roll" type="text" placeholder="Enter Your Roll..." class="form-control" required>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="form-towcol">
+			<div class="form-group">
+				<label class="control-label">Resident :</label>
+				<div class="input-width">
+					<label for="yes"><input type="radio" name="yes" id="yes" value="yes">&nbsp;Yes</label>
+					<label for="no"><input type="radio" name="no" id="no" value="no">&nbsp;No</label>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="control-label">Status :</label>
+				<div class="input-width">
+					<label for="available"><input type="radio" name="available" id="available" value="available">&nbsp;Available</label>
+					<label for="not_available"><input type="radio" name="not_available" id="not_available" value="not_available">&nbsp;Not Available</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="form-towcol">
+			<div class="form-group">
+				<label for="photo" class="control-label">Photo <span class="req">*</span> :</label>
+				<div class="input-width">
+					<input name="photo" type="file" class="file" required>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="sign" class="control-label">Signature <span class="req">*</span> :</label>
+				<div class="input-width">
+					<input name="sign" type="file" class="file" required>
+				</div>
+			</div>
+		</div>
+		<div class="btn-group pull-right">
+			<input class="btn btn-danger" type="reset" name="reset" value="Reset">
+			<input class="btn btn-success" type="submit" name="submit" value="Save">
+		</div>
+
+
+	</form>
+</body>
+</html>
